@@ -1,0 +1,31 @@
+.ticker-wrapper {
+  background: #000;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.ticker-track {
+  display: flex;
+  gap: 50px;
+  padding: 8px 0;
+  white-space: nowrap;
+  animation: scrollTicker 25s linear infinite;
+  font-size: 14px;
+}
+
+.ticker-track span {
+  font-weight: 600;
+}
+
+.up {
+  color: #16c784;
+}
+
+.down {
+  color: #ea3943;
+}
+
+@keyframes scrollTicker {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}

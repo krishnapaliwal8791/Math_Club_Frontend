@@ -1,0 +1,300 @@
+/* ================= HERO SECTION ================= */
+
+.hero {
+  position: relative;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  background: radial-gradient(circle at 50% 40%, #111827 0%, #0B0F1A 60%);
+  overflow: hidden;
+}
+
+/* Grid overlay */
+.grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Main layout split */
+.hero-split {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+}
+
+/* Left content */
+.hero-left {
+  flex: 1;
+}
+
+/* Right chart */
+.hero-right {
+  flex: 1;
+}
+
+/* ================= TITLE ================= */
+
+.hero-title {
+  position: relative;
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: 2px;
+}
+
+.hero-title::after {
+  content: "TRADE MATRIX";
+  position: absolute;
+  left: 8px;
+  top: 8px;
+  color: rgba(0, 255, 136, 0.04);
+  filter: blur(2px);
+  z-index: -1;
+}
+
+.trade {
+  font-weight: 800;
+  letter-spacing: -1px;
+}
+
+.matrix {
+  background: linear-gradient(90deg, #00ff88, #00c2ff, #00ff88);
+  background-size: 250% 250%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow:
+    0 0 15px rgba(0, 255, 136, 0.7),
+    0 0 25px rgba(0, 255, 136, 0.4);
+  animation: matrixGlow 2.5s ease-in-out infinite;
+}
+
+@keyframes matrixGlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ================= DESCRIPTION ================= */
+
+.hero-description {
+  margin-top: 20px;
+  font-size: 1.1rem;
+  color: #b0b8d4;
+  max-width: 520px;
+  line-height: 1.6;
+}
+
+/* ================= CTA BUTTON ================= */
+
+.hero-btn {
+  display: inline-block;
+  margin-top: 28px;
+  padding: 14px 32px;
+  background: linear-gradient(135deg, #16c784, #00ff88);
+  color: #0B0F1A;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 20px rgba(0, 255, 136, 0.4);
+}
+
+.hero-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 30px rgba(0, 255, 136, 0.7);
+}
+
+/* ================= EVENT META ================= */
+
+.event-meta {
+  margin-top: 28px;
+  display: flex;
+  gap: 60px;
+}
+
+.meta-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.meta-label {
+  font-size: 11px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+}
+
+.meta-value {
+  font-size: 18px;
+  font-weight: 700;
+  color: #16c784;
+}
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 992px) {
+  .hero-split {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-split {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-left {
+    align-items: center;
+  }
+
+  .hero-description {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .event-meta {
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .hero-btn {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+/* ================= WHY SECTION ================= */
+
+.why-section {
+  padding: 100px 20px;
+  background: #0B0F1A;
+}
+
+.why-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+.why-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 60px;
+  background: linear-gradient(90deg, #00ff88, #00c2ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+}
+
+.why-card {
+  background: rgba(255,255,255,0.04);
+  padding: 40px 30px;
+  border-radius: 18px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: 0.3s ease;
+}
+
+.why-card h3 {
+  margin-bottom: 15px;
+  font-size: 1.3rem;
+  color: #16c784;
+}
+
+.why-card p {
+  color: rgba(255,255,255,0.7);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.why-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(0,255,136,0.4);
+  box-shadow: 0 10px 30px rgba(0,255,136,0.15);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .why-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ================= CONTACT SECTION ================= */
+
+.contact-section {
+  padding: 120px 20px;
+  background: #0B0F1A;
+}
+
+.contact-container {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.contact-title {
+  font-size: 2.3rem;
+  font-weight: 800;
+  margin-bottom: 60px;
+  background: linear-gradient(90deg, #00ff88, #00c2ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-card {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+  padding: 50px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.contact-item h4 {
+  font-size: 0.9rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.5);
+  margin-bottom: 10px;
+}
+
+.contact-item p {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #16c784;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-card {
+    grid-template-columns: 1fr;
+    padding: 35px;
+  }
+}

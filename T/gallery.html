@@ -1,0 +1,345 @@
+gallery page
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematics Club - Gallery</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<style>
+    body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #000000, #1a0000, #330000);
+    color: white;
+}
+
+/* ===== NAVBAR ===== */
+.custom-navbar {
+    background: rgba(0, 0, 0, 0.95);
+    border-bottom: 2px solid red;
+    padding: 10px 0;
+}
+
+.logo {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.brand-text {
+    font-weight: 700;
+    color: white;
+    font-size: 18px;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: red !important;
+}
+
+.btn-danger {
+    background-color: red;
+    border: none;
+    padding: 8px 18px;
+    font-weight: 600;
+}
+
+.btn-danger:hover {
+    background-color: darkred;
+}
+
+/* ===== EVENT CARD ===== */
+.event-card {
+    background-color: #181515;
+    border: 1px solid red;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+}
+
+.event-title {
+    text-align: center;
+    margin-bottom: 20px;
+    font-family:'prague';
+    color:white;
+}
+
+.section-title{
+        text-align: center;
+    color: #ff1a1a;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+    font-family:'pargue';
+}
+
+.event-desc {
+    text-align: center;
+    font-size: 18px;
+    color: #00e9e9;
+    margin-bottom: 30px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+/* ===== GALLERY IMAGES ===== */
+.gallery-img {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid red;
+    transition: 0.4s;
+}
+
+.gallery-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgb(252, 3, 3);
+    border-color:white;
+}
+
+/* ===== FOOTER ===== */
+.footer-section {
+    background: #000000;
+    border-top: 2px solid red;
+}
+
+.footer-title {
+    color: red;
+    text-transform: uppercase;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.7);
+}
+
+.footer-role {
+    font-weight: 600;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.footer-contact {
+    color: #00ccff;
+    font-size: 16px;
+}
+
+.footer-line {
+    border: 1px solid red;
+    width: 60%;
+    margin: 20px auto;
+}
+
+.footer-copy {
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* ===== RESPONSIVE IMPROVEMENTS ===== */
+@media (max-width: 768px) {
+    .brand-text {
+        font-size: 14px;
+    }
+
+    .section-title {
+        font-size: 22px;
+    }
+
+    .event-desc {
+        font-size: 16px;
+    }
+}
+</style>
+
+<body>
+
+   <!-- ===== NAVBAR ===== -->
+<nav class="navbar navbar-expand-lg custom-navbar sticky-top">
+    <div class="container">
+
+        <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="https://raw.githubusercontent.com/krishnapaliwal8791/mathematics-club-web-assets/refs/heads/main/1.jpg" alt="Club Logo" class="logo">
+            <span class="brand-text ms-2">Mathematics Club</span>
+        </a>
+
+        <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav align-items-lg-center text-center">
+                <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                <li class="nav-item"><a class="nav-link active" href="team.html">Our Team</a></li>
+                <li class="nav-item"><a class="nav-link" href="developer.html">Developer</a></li>
+                <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                    <a href="gallery.html" class="btn btn-danger">Gallery</a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+</nav>
+
+    <!-- ===== SECTION 1 ===== -->
+    <div class="container py-5">
+        <h2 class="section-title">Our Past Events</h2>
+
+        <div class="card event-card p-4">
+            <h3 class="event-title">Aarunya Stall</h3>
+
+            <div class="row g-4">
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <img src="https://pn-paul.netlify.app/image/ff-logo-02.png"
+                        class="gallery-img img-fluid">
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <img src="https://pn-paul.netlify.app/image/ff-logo-02.png"
+                        class="gallery-img img-fluid">
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <img src="https://pn-paul.netlify.app/image/ff-logo-02.png"
+                        class="gallery-img img-fluid">
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <img src="https://pn-paul.netlify.app/image/ff-logo-02.png"
+                        class="gallery-img img-fluid">
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <img src="https://pn-paul.netlify.app/image/ff-logo-02.png"
+                        class="gallery-img img-fluid">
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <img src="https://pn-paul.netlify.app/image/ff-logo-02.png"
+                        class="gallery-img img-fluid">
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <img src="https://pn-paul.netlify.app/image/ff-logo-02.png"
+                        class="gallery-img img-fluid">
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <img src="https://pn-paul.netlify.app/image/ff-logo-02.png"
+                        class="gallery-img img-fluid">
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <img src="https://pn-paul.netlify.app/image/ff-logo-02.png"
+                        class="gallery-img img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== SECTION 2 ===== -->
+    <div class="container pb-5">
+        <div class="card event-card p-4">
+            <h3 class="event-title">Number Ninja</h3>
+
+            <p class="event-desc">
+                This
+                event aims to provide a fun and competitive platform for students to explore mathematics
+                while fostering teamwork and logical reasoning.
+            </p>
+
+            <div class="row g-4">
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <img src="https://pn-paul.netlify.app/image/ff-logo-02.png"
+                        class="gallery-img img-fluid">
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <img src="https://pn-paul.netlify.app/image/ff-logo-02.png"
+                        class="gallery-img img-fluid">
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <img src="https://pn-paul.netlify.app/image/ff-logo-02.png"
+                        class="gallery-img img-fluid">
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <img src="https://pn-paul.netlify.app/image/ff-logo-02.png"
+                        class="gallery-img img-fluid">
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <img src="https://pn-paul.netlify.app/image/ff-logo-02.png"
+                        class="gallery-img img-fluid">
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <img src="https://pn-paul.netlify.app/image/ff-logo-02.png"
+                        class="gallery-img img-fluid">
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <img src="https://pn-paul.netlify.app/image/ff-logo-02.png"
+                        class="gallery-img img-fluid">
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <img src="https://pn-paul.netlify.app/image/ff-logo-02.png"
+                        class="gallery-img img-fluid">
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg-4">
+                    <img src="https://pn-paul.netlify.app/image/ff-logo-02.png"
+                        class="gallery-img img-fluid">
+                </div>
+            </div>
+        </div>
+    </div>
+
+     <!-- ===== FOOTER ===== -->
+    <footer class="footer-section py-4 mt-5">
+        <div class="container text-center">
+
+            <h5 class="footer-title">Contact Information</h5>
+
+            <div class="row justify-content-center mt-3">
+                <div class="col-md-5 col-sm-12 mb-3">
+                    <p class="footer-role">President</p>
+                    <p class="footer-contact">📞 +91 98765 43210</p>
+                </div>
+
+                <div class="col-md-5 col-sm-12 mb-3">
+                    <p class="footer-role">Secretary</p>
+                    <p class="footer-contact">📞 +91 91234 56789</p>
+                </div>
+            </div>
+
+            <hr class="footer-line">
+
+            <p class="footer-copy">
+                © 2026 Mathematics Club | All Rights Reserved
+            </p>
+
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS (Required for navbar toggle) -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

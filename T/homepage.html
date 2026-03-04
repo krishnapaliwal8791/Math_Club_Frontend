@@ -1,0 +1,337 @@
+Home page
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mathematics Club</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<style>
+    body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #000000, #1a0000, #330000);
+    color: white;
+}
+
+/* ===== NAVBAR ===== */
+.custom-navbar {
+    background: rgba(0, 0, 0, 0.95);
+    border-bottom: 2px solid red;
+}
+
+.logo {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.brand-text {
+    font-weight: bold;
+    color: white;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: red !important;
+}
+
+.btn-danger {
+    background-color: red;
+    border: none;
+}
+
+.btn-danger:hover {
+    background-color: darkred;
+}
+
+/* ===== SECTION ===== */
+.section-title {
+    text-align: center;
+    color: red;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.7);
+    font-family:'prague';
+}
+
+.section-text {
+    font-size: 17px;
+    line-height: 1.7;
+    text-align: justify;
+}
+
+/* ===== Developer Card ===== */
+.developer-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.4);
+}
+
+.dev-img {
+    max-width: 150px;
+}
+
+.role {
+    color: #00ccff;
+    font-weight: 500;
+}
+
+/* ===== Event Section ===== */
+.event-name span {
+    color: #00ccff;
+}
+
+.description {
+    color: #00ccff;
+    font-size: 18px;
+}
+
+.event-list li {
+    color: #00ccff;
+    margin-bottom: 8px;
+}
+
+/* ===== REGISTER BUTTON ===== */
+.register-btn {
+    background: red;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.register-btn:hover {
+    background: darkred;
+    transform: scale(1.05);
+}
+
+/* ===== FOOTER ===== */
+.footer-section {
+    background: #000000;
+    border-top: 2px solid red;
+}
+
+.footer-title {
+    color: red;
+    text-transform: uppercase;
+    text-shadow: 0 0 8px rgba(255, 0, 0, 0.7);
+}
+
+.footer-role {
+    font-weight: 600;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.footer-contact {
+    color: #00ccff;
+    font-size: 16px;
+}
+
+.footer-line {
+    border: 1px solid red;
+    width: 60%;
+    margin: 20px auto;
+}
+
+.footer-copy {
+    font-size: 14px;
+    color: #aaa;
+}
+
+/* ===== Responsive Adjustments ===== */
+@media (max-width: 768px) {
+
+    .section-text {
+        font-size: 15px;
+        text-align: left;
+    }
+
+    .dev-img {
+        max-width: 120px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+}
+</style>
+
+<body>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar navbar-expand-lg custom-navbar sticky-top">
+        <div class="container">
+
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="https://raw.githubusercontent.com/krishnapaliwal8791/mathematics-club-web-assets/refs/heads/main/1.jpg"
+                    alt="Club Logo" class="logo">
+                <span class="brand-text ms-2">Mathematics Club</span>
+            </a>
+
+            <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav text-center">
+                    <li class="nav-item"><a class="nav-link" href="home.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="team.html">Our Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="developer.html">Developer</a></li>
+                    <li class="nav-item ms-lg-3 mt-2 mt-lg-0">
+                        <a href="gallery.html" class="btn btn-danger">Gallery</a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <!-- ===== MAIN CONTENT ===== -->
+    <div class="container py-5">
+
+        <!-- About Section -->
+        <section class="mb-5">
+            <h2 class="section-title">Mathematics Club</h2>
+
+            <p class="section-text">
+                The Mathematics Club is a vibrant community where curiosity meets critical thinking. We believe
+                mathematics is more than formulas—it is the foundation of science, technology, and logical reasoning.
+            </p>
+
+            <p class="section-text">
+                Our club unites passionate students to explore mathematical concepts beyond the classroom, fostering
+                analytical skills, innovative thinking, and academic excellence.
+            </p>
+
+            <p class="section-text">
+                With a clear vision to build an inspiring mathematical community, we focus on developing strong
+                problem-solving abilities that prepare students for academic achievements, competitive examinations, and
+                real-world challenges.
+            </p>
+
+            <p class="section-text">
+                Through teamwork, leadership, and practical application of mathematical ideas, the Mathematics Club
+                empowers students to grow intellectually and professionally.
+            </p>
+        </section>
+
+        <!-- Developer Section -->
+        <section class="mb-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-6 col-md-8 col-sm-12">
+                    <div class="developer-card text-center p-4">
+
+                        <img src="https://pn-paul.netlify.app/image/ff-logo-02.png" class="img-fluid dev-img mb-3"
+                            alt="Aum Mehta">
+
+                        <h4>Aum Mehta</h4>
+                        <p class="role">Event Organiser</p>
+
+                        <p class="section-text">
+                            1st year Computer Science and Design student and Web Developer of the
+                            Mathematics Club website. Responsible for developing the structure
+                            and core functionality of the platform.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Event Section -->
+        <section class="mb-5">
+            <h2 class="section-title">Upcoming Event</h2>
+
+            <h4 class="event-name">
+                Event Name - <span>Trade Matrix</span>
+            </h4>
+
+            <h5>Event Description</h5>
+            <p class="description">
+                A virtual trading competition designed to test analytical thinking,
+                decision-making, and risk management skills using mathematical strategies
+                in a simulated market environment.
+            </p>
+
+            <h5>Event Details</h5>
+            <ul class="event-list">
+                <li><strong>Date:</strong> 29 February 2028</li>
+                <li><strong>Time:</strong> 9:00 PM onwards</li>
+                <li><strong>Organizer:</strong> Mathematics Club, MITS DU</li>
+                <li><strong>Participants:</strong> All Undergraduate Students</li>
+            </ul>
+
+            <h5>Prizes & Certificates</h5>
+            <ul class="event-list">
+                <li>Total Prize Money: ₹10,000</li>
+                <li>Top 3 winners receive trophies, certificates & prize money.</li>
+                <li>All participants receive Certificates of Participation.</li>
+            </ul>
+
+            <!-- Register Button -->
+            <center>
+                <div class="mt-4">
+                    <a href="#" class="btn register-btn btn-lg">
+                        Register Now
+                    </a>
+                </div>
+            </center>
+        </section>
+
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer-section py-4 mt-5">
+        <div class="container text-center">
+
+            <h5 class="footer-title">Contact Information</h5>
+
+            <div class="row justify-content-center mt-3">
+                <div class="col-md-5 col-sm-12 mb-3">
+                    <p class="footer-role">President</p>
+                    <p class="footer-contact">📞 +91 98765 43210</p>
+                </div>
+
+                <div class="col-md-5 col-sm-12 mb-3">
+                    <p class="footer-role">Secretary</p>
+                    <p class="footer-contact">📞 +91 91234 56789</p>
+                </div>
+            </div>
+
+            <hr class="footer-line">
+
+            <p class="footer-copy">
+                © 2026 Mathematics Club | All Rights Reserved
+            </p>
+
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
