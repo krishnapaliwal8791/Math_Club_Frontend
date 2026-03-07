@@ -189,8 +189,43 @@ return
 // SUCCESS
 //////////////////////////////////////////////////
 
-alert("Team registered successfully!")
+// create order
 
+const response = await fetch("https://kulzpvgrpofrkjsxokdj.functions.supabase.co/create-order", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json"
+  },
+  body: JSON.stringify({
+    team_type: team_type
+  })
+})
+
+const order = await response.json()
+
+
+const options = {
+  key: "rzp_test_SO2HD9lXEqBMW7",
+  amount: order.amount,
+  currency: "INR",
+  name: "Trade Matrix",
+  description: "Team Registration",
+  order_id: order.id,
+
+  handler: function (response) {
+
+    alert("Payment Successful!")
+
+    form.reset()
+    membersContainer.innerHTML = ""
+
+  }
+
+}
+
+const rzp = new Razorpay(options)
+
+rzp.open()
 form.reset()
 membersContainer.innerHTML = ""
 
